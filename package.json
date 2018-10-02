@@ -5,12 +5,19 @@
   "main": "",
   "scripts": {
     "compile": "tsc",
-    "compile:watch": "tsc -w"
+    "compile:watch": "npm run compile -- -w",
+    "lint": "tslint -c tslint.json -p tsconfig.json",
+    "format": "prettier --config .prettierrc",
+    "format:fix": "npm run format -- --write"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "prettier": "^1.14.3",
+    "tslint": "^5.11.0",
+    "tslint-config-airbnb": "^5.11.0",
+    "tslint-config-prettier": "^1.15.0",
     "typescript": "^3.1.1"
   }
 }

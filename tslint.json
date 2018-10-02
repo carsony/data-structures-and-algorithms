@@ -1,0 +1,13 @@
+{
+  "extends": [
+    "tslint:all",
+    "tslint-config-airbnb",
+    "tslint-config-prettier"
+  ],
+  "rules": {
+    "no-inferrable-types": false,
+    "only-arrow-functions": false,
+    "no-null-keyword": false,
+    "max-line-length": [true, 100]
+  }
+}
