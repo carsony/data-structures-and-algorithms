@@ -8,6 +8,8 @@
     "no-inferrable-types": false,
     "only-arrow-functions": false,
     "no-null-keyword": false,
-    "max-line-length": [true, 100]
+    "max-line-length": [true, 100],
+    "no-magic-numbers": false,
+    "no-default-export": false
   }
 }

@@ -8,13 +8,18 @@
     "compile:watch": "npm run compile -- -w",
     "lint": "tslint -c tslint.json -p tsconfig.json",
     "format": "prettier --config .prettierrc",
-    "format:fix": "npm run format -- --write"
+    "format:fix": "npm run format -- --write",
+    "test": "jest --coverage --verbose",
+    "test:watch": "npm run test -- --watchAll"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "@types/jest": "^23.3.2",
+    "jest": "^23.6.0",
     "prettier": "^1.14.3",
+    "ts-jest": "^23.10.3",
     "tslint": "^5.11.0",
     "tslint-config-airbnb": "^5.11.0",
     "tslint-config-prettier": "^1.15.0",
