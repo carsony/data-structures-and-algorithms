@@ -3,26 +3,43 @@
   "version": "1.0.0",
   "description": "",
   "main": "",
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
   "scripts": {
     "compile": "tsc",
     "compile:watch": "npm run compile -- -w",
     "lint": "tslint -c tslint.json -p tsconfig.json",
+    "lint:fix": "npm run lint -- --fix",
     "format": "prettier --config .prettierrc",
     "format:fix": "npm run format -- --write",
     "test": "jest --coverage --verbose",
-    "test:watch": "npm run test -- --watchAll"
+    "test:watch": "npm run test -- --watchAll",
+    "test:changed": "npm run test -- --bail --findRelatedTests"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
   "devDependencies": {
     "@types/jest": "^23.3.2",
+    "husky": "^1.1.1",
     "jest": "^23.6.0",
+    "lint-staged": "^7.3.0",
     "prettier": "^1.14.3",
     "ts-jest": "^23.10.3",
     "tslint": "^5.11.0",
     "tslint-config-airbnb": "^5.11.0",
     "tslint-config-prettier": "^1.15.0",
     "typescript": "^3.1.1"
+  },
+  "lint-staged": {
+    "*.ts": [
+      "npm run format:fix",
+      "npm run lint:fix",
+      "git add",
+      "npm run test:changed"
+    ]
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
   }
 }
