@@ -10,6 +10,10 @@
     "no-null-keyword": false,
     "max-line-length": [true, 100],
     "no-magic-numbers": false,
-    "no-default-export": false
+    "no-default-export": false,
+    "completed-docs": false,
+    "no-unused-variable": false, // rely on compiler
+    "import-name": false,
+    "file-name-casing": false
   }
 }
